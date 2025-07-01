@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8-bit Basket Case (Conceptual)</title>
+    <title>Useless Program</title>
     <!-- Tailwind CSS CDN for easy styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -16,57 +16,15 @@
 <body class="bg-gradient-to-br from-green-100 to-yellow-200 min-h-screen flex items-center justify-center p-4">
     <div class="bg-white p-8 rounded-xl shadow-lg text-center max-w-2xl w-full">
         <h1 class="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-600 mb-6">
-            Basket Case: The 8-bit Demake
+            Useless program that just plays an 8-bit Green Day song
         </h1>
-        <p class="text-gray-800 text-lg mb-6">
-            While I can't generate the actual audio, let's explore what an 8-bit chiptune version of Green Day's "Basket Case" might sound like!
-            Imagine the raw energy of the punk rock anthem filtered through the limited, yet charming, sound capabilities of classic 8-bit game consoles.
-        </p>
-
-        <div class="text-left mb-6">
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">Chiptune Characteristics:</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>**Limited Polyphony:** Fewer simultaneous notes, often 3-4 distinct voices.</li>
-                <li>**Basic Waveforms:** Primarily square waves (for lead melodies and bass), triangle waves (for smoother bass or arpeggios), and noise channels (for percussion).</li>
-                <li>**Arpeggiation:** Rapidly cycling through notes of a chord to simulate polyphony or create a distinctive texture.</li>
-                <li>**Simple Percussion:** Rhythmic clicks and white noise for drums.</li>
-            </ul>
-        </div>
-
-        <div class="text-left mb-6">
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">Translating "Basket Case" to 8-bit:</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>
-                    <strong class="text-green-700">Main Guitar Riff:</strong> The iconic, driving guitar riff would likely be played on a **square wave channel**, possibly with a slight arpeggiation effect to give it more body, mimicking the distortion. The power chords would be simplified to single notes or two-note intervals.
-                </li>
-                <li>
-                    <strong class="text-green-700">Vocals (Melody):</strong> Billie Joe Armstrong's vocal melody would be the primary focus of another **square wave channel**, perhaps with a vibrato effect (rapid pitch oscillation) to add expressiveness, a common chiptune technique.
-                </li>
-                <li>
-                    <strong class="text-green-700">Bassline:</strong> The strong, simple bassline would be handled by a **triangle wave channel**, providing a smooth, deep foundation without the harshness of a square wave.
-                </li>
-                <li>
-                    <strong class="text-green-700">Drums:</strong> The energetic drum beat would be simulated using the **noise channel** for snares and cymbals, and short, punchy square waves or triangle waves for kick drums and tom fills. The rapid-fire hi-hats could be a quick burst of noise.
-                </li>
-                <li>
-                    <strong class="text-green-700">Bridge/Solo:</strong> The guitar solo would be a standout moment, likely a highly melodic **square wave lead**, perhaps with portamento (sliding between notes) to emulate the guitar's bendy sound. The underlying chords in the bridge would be reduced to arpeggiated patterns on a separate channel.
-                </li>
-                <li>
-                    <strong class="text-green-700">Overall Feel:</strong> The fast tempo and punk rock energy would be maintained, but the sound would be distinctly "gamey," reminiscent of an NES or Game Boy soundtrack, with a charmingly lo-fi quality.
-                </li>
-            </ul>
-        </div>
 
         <div class="mt-8">
             <button id="playPauseButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Play/Pause 8-bit Basket Case (Conceptual)
+                Play/Pause 8-bit Green Day Song (Placeholder)
             </button>
             <p id="message" class="text-sm text-red-600 mt-4 italic"></p>
         </div>
-
-        <p class="text-gray-700 text-base italic mt-6">
-            This description provides a blueprint for how "Basket Case" could be reimagined in an 8-bit style. To actually create it, you would typically use a Digital Audio Workstation (DAW) with chiptune VSTs or a dedicated chiptune tracker program.
-        </p>
     </div>
 
     <script>
@@ -75,10 +33,10 @@
         const messageElement = document.getElementById('message');
 
         // Create a new Audio object
-        // IMPORTANT: You need to replace 'path/to/your/8bit_basket_case.mp3'
-        // with an actual URL to an 8-bit audio file of Basket Case.
+        // IMPORTANT: You need to replace 'Basket Case.mp3'
+        // with an actual URL to an 8-bit audio file of a Green Day song.
         // This example uses a placeholder URL.
-        const audio = new Audio('Basket Case.mp3'); // Placeholder audio
+        const audio = new Audio('Scattered.mp3'); // Placeholder audio
         let isPlaying = false;
 
         // Add an event listener to the button
@@ -86,13 +44,13 @@
             if (isPlaying) {
                 audio.pause();
                 isPlaying = false;
-                messageElement.textContent = 'Audio paused. (Remember to replace the placeholder audio URL!)';
+                messageElement.textContent = 'Audio paused.';
             } else {
                 // Attempt to play the audio. This might fail if the browser
                 // blocks autoplay without user interaction.
                 audio.play().then(() => {
                     isPlaying = true;
-                    messageElement.textContent = 'Playing conceptual 8-bit audio... (This is placeholder audio, not actual 8-bit Basket Case!)';
+                    messageElement.textContent = 'Playing Scattered';
                 }).catch(error => {
                     // Handle errors, e.g., if autoplay is blocked
                     messageElement.textContent = 'Failed to play audio. Browser might block autoplay. Please click the button again or ensure a valid audio URL is provided. Error: ' + error.message;
@@ -108,7 +66,7 @@
         });
 
         // Initial message to guide the user
-        messageElement.textContent = 'Click the button to play conceptual 8-bit audio. (You need to provide a real 8-bit audio file!)';
+        messageElement.textContent = 'Click the button to play this really cool song';
     </script>
 </body>
 </html>
