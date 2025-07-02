@@ -57,7 +57,8 @@
         const startButton = document.getElementById('startButton');
         const stopButton = document.getElementById('stopButton');
         const statusParagraph = document.getElementById('status');
-        const scratchSound = new Audio('scratch.mp3');
+        const scratchSound = new Audio('record_scratch.mp3');
+        const danceSound = new Audio('no dancing.mp3');
 
         // Initialize SpeechRecognition variable
         let recognition;
@@ -96,9 +97,14 @@
                 }
 
                 if (danceDetected) {
-                    statusParagraph.textContent = '🥳 "Dance" detected! 🥳';
+                    statusParagraph.textContent = 'NO DANCING!!!!!!!';
+                    scratchSound.currentTime = 0;
+                    danceSound.currentTime = 0;
                     scratchSound.play();
-                    // You could add more actions here, e.g., play a sound, trigger an animation
+                    // Play dance sound only after scratch sound ends
+                    scratchSound.onended = function() {
+                        danceSound.play();
+                    };
                 } else {
                     statusParagraph.textContent = 'No "dance" detected. Try again.';
                 }
