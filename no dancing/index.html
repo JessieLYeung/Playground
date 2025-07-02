@@ -57,6 +57,7 @@
         const startButton = document.getElementById('startButton');
         const stopButton = document.getElementById('stopButton');
         const statusParagraph = document.getElementById('status');
+        const scratchSound = new Audio('scratch.mp3');
 
         // Initialize SpeechRecognition variable
         let recognition;
@@ -96,6 +97,7 @@
 
                 if (danceDetected) {
                     statusParagraph.textContent = '🥳 "Dance" detected! 🥳';
+                    scratchSound.play();
                     // You could add more actions here, e.g., play a sound, trigger an animation
                 } else {
                     statusParagraph.textContent = 'No "dance" detected. Try again.';
